@@ -1,0 +1,57 @@
+.datafield-container {
+}
+
+/* Custom label for dropdown */
+.datafield-container label {
+}
+
+/* Custom select styles (if needed) */
+.custom-select {
+  // Full width for the dropdown
+}
+
+.custom-select__control {
+  background-color: #f4a12e !important; // Orange background
+  color: white !important; // White text
+  border: none !important; // Remove border
+  border-radius: 30px !important; // Fully rounded corners
+  padding: 0px 10px !important; // Padding inside the select
+  height: 33px !important;
+  //   min-height: 33px !important; // Set consistent height
+  box-shadow: none !important; // Remove default shadow
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    border-color: none !important; // No border on hover
+  }
+}
+
+.custom-select__indicator-separator {
+  display: none !important; // Remove the vertical separator line between the arrow and the text
+}
+
+.custom-select__dropdown-indicator {
+  color: white !important; // White dropdown arrow
+  padding: 0px 8px !important;
+}
+
+.custom-select__single-value {
+  color: white !important; // White text for selected value
+}
+
+.custom-select__menu {
+  border-radius: 10px !important; // Rounded corners for the dropdown menu
+  background-color: #fff !important; // White background for the dropdown menu
+}
+
+.custom-select__option {
+  padding: 10px !important; // Spacing for each option
+  background-color: white !important; // Background color of options
+  color: black !important; // Text color for options
+
+  &:hover {
+    background-color: #e2e2e2 !important; // Hover effect for options
+  }
+}

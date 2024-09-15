@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #3498db;
+  --background-color: white;
+  --text-color: black;
+  --primary-theme-color: #eb261e;
+  --datafield-color: #c11c15;
+}
+
+.dark-theme {
+  --primary-color: #e74c3c;
+  --background-color: #2c3e50;
+  --text-color: #ecf0f1;
+  --primary-theme-color: #0d95d1;
+  --datafield-color: #0c6b93;
+}
