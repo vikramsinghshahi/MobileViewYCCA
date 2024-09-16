@@ -1,6 +1,7 @@
 import DataField from '../../Common/DataField/DataField';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Activity1 from '../../assets/activity1.png';
 
 function Activity() {
   const navigate = useNavigate();
@@ -65,56 +66,26 @@ function Activity() {
           className="card"
           onClick={() => navigate('/dashboard/activity/1')}
         >
-          <img src="/activity1.png" alt="Search" />
+          <img src={Activity1} alt="Search" />
         </button>
         <button
           className="card"
           onClick={() => navigate('/dashboard/activity/2')}
         >
-          <img src="/activity1.png" alt="Search" />
+          <img src={Activity1} alt="Search" />
         </button>
         <div className="card  ">
-          <img src="/activity1.png" alt="Search" />
+          <img src={Activity1} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/activity1.png" alt="Search" />
+          <img src={Activity1} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/activity1.png" alt="Search" />
+          <img src={Activity1} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/activity1.png" alt="Search" />
+          <img src={Activity1} alt="Search" />
         </div>
-        {/* <div className="card  ">
-          <img src="/More7.png" alt="Search" />
-        </div>
-        <div className="card  ">
-          <img src="/More8.png" alt="Search" />
-        </div>
-        <div className="card ">
-          <img src="/More9.png" alt="Search" />
-        </div>
-        <div className="card  ">
-          <img src="/More10.png" alt="Search" />
-        </div>
-        <div className="card  ">
-          <img src="/More11.png" alt="Search" />
-        </div>
-        <div className="card  ">
-          <img src="/More12.png" alt="Search" />
-        </div>
-        <div className="card  ">
-          <img src="/More13.png" alt="Search" />
-        </div>
-        <div className="card  ">
-          <img src="/More14.png" alt="Search" />
-        </div>
-        <div className="card  ">
-          <img src="/More15.png" alt="Search" />
-        </div>
-        <div className="card  ">
-          <img src="/More16.png" alt="Search" />
-        </div> */}
       </>
     );
   };

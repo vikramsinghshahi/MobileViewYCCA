@@ -1,6 +1,8 @@
 import DataField from '../../Common/DataField/DataField';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PAnnouneCard from '../../assets/PAnnouneCard.png';
+import Announc from '../../assets/announc.png';
 
 function Announcement() {
   const navigate = useNavigate();
@@ -66,14 +68,14 @@ function Announcement() {
             className="card"
             onClick={() => navigate('/dashboard/announcement/1')}
           >
-            <img src="/PAnnouneCard.png" alt="Search" />
+            <img src={PAnnouneCard} alt="Search" />
           </button>
         ) : (
           <button
             className="card"
             onClick={() => navigate('/dashboard/announcement/1')}
           >
-            <img src="/announc.png" alt="Search" />
+            <img src={Announc} alt="Search" />
           </button>
         )}
 
@@ -81,22 +83,22 @@ function Announcement() {
           className="card"
           onClick={() => navigate('/dashboard/announcement/2')}
         >
-          <img src="/announc.png" alt="Search" />
+          <img src={Announc} alt="Search" />
         </button>
         <button
           className="card"
           onClick={() => navigate('/dashboard/announcement/3')}
         >
-          <img src="/announc.png" alt="Search" />
+          <img src={Announc} alt="Search" />
         </button>
         <div className="card  ">
-          <img src="/announc.png" alt="Search" />
+          <img src={Announc} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/announc.png" alt="Search" />
+          <img src={Announc} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/announc.png" alt="Search" />
+          <img src={Announc} alt="Search" />
         </div>
         {/* <div className="card  ">
           <img src="/More7.png" alt="Search" />
