@@ -14,6 +14,9 @@ import SingleReport from './DashboardPages/SingleReport';
 import SingleActivity from './DashboardPages/SingleAcitivity';
 import SingleAnnouncement from './DashboardPages/SIngleAnnounce';
 import SingleChat from './DashboardPages/SingleChat';
+import Fees from './DashboardPages/Fees';
+import SingleFee from './DashboardPages/SingleFee';
+import Profile from './DashboardPages/Profile';
 
 function Dashboard() {
   const options = [
@@ -227,6 +230,9 @@ function Dashboard() {
         <Route path="report/:id" element={<SingleReport />} />
         <Route path="chats" element={<Chats />} />
         <Route path="chats/:id" element={<SingleChat />} />
+        <Route path="fees" element={<Fees />} />
+        <Route path="fees/:id" element={<SingleFee />} />
+        <Route path="profile" element={<Profile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     );

@@ -89,7 +89,7 @@ function More() {
           </>
         ) : (
           <>
-            <div className="card">
+            <div className="card" onClick={() => navigate('/dashboard/fees')}>
               <img src="/Fee.png" alt="Search" />
             </div>
             <div className="card">
@@ -100,7 +100,7 @@ function More() {
         <div className="card  ">
           <img src="/More13.png" alt="Search" />
         </div>
-        <div className="card  ">
+        <div className="card" onClick={() => navigate('/dashboard/profile')}>
           <img src="/More14.png" alt="Search" />
         </div>
         <div className="card  ">
