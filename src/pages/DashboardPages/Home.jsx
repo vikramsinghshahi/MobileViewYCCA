@@ -1,11 +1,14 @@
 import DataField from '../../Common/DataField/DataField';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+const { BASE_URL } = import.meta.env;
 
 function Home() {
   const [logoImage, setLogoImage] = useState(null);
   const [isParentLogin, setUserLogin] = useState(null);
   const navigator = useNavigate();
+
+  console.log({ BASE_URL });
 
   useEffect(() => {
     const savedImage = localStorage.getItem('logo-image');
