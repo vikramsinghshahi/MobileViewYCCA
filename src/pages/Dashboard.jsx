@@ -12,7 +12,7 @@ import Report from './DashboardPages/Report';
 import Chats from './DashboardPages/Chats';
 import SingleReport from './DashboardPages/SingleReport';
 import SingleActivity from './DashboardPages/SingleAcitivity';
-import SingleAnnouncement from './DashboardPages/SIngleAnnounce';
+import SingleAnnouncement from './DashboardPages/SingleAnnounce';
 import SingleChat from './DashboardPages/SingleChat';
 import Fees from './DashboardPages/Fees';
 import SingleFee from './DashboardPages/SingleFee';
