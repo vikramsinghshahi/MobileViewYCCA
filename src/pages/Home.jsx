@@ -28,7 +28,7 @@ function Home() {
         {logoImage ? (
           <img src={logoImage} alt="YCCA Logo" className="logo" />
         ) : (
-          <img src="/logo.png" alt="YCCA Logo" className="logo" />
+          <img src="/src/assets/logo.png" alt="YCCA Logo" className="logo" />
         )}
 
         <h1>Welcome</h1>

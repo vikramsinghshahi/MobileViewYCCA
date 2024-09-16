@@ -50,7 +50,7 @@ function Dashboard() {
           />
         </div>
         <div className="avatar">
-          <img src="/avatar.png" alt="User Avatar" />
+          <img src="/src/assets/avatar.png" alt="User Avatar" />
         </div>
       </div>
     );
@@ -68,13 +68,17 @@ function Dashboard() {
     return (
       <div className="header">
         <div className="logo">
-          <img src="/logo.png" alt="YCCA Logo" />
+          <img src="/src/assets/logo.png" alt="YCCA Logo" />
         </div>
         <div className="flex">
           <div className="microFont bold">Dashboard</div>
           <div className="date">
             {formatDate()}
-            <img src="/hamburger.png" alt="YCCA Logo" className="hamburger" />
+            <img
+              src="/src/assets/hamburger.png"
+              alt="YCCA Logo"
+              className="hamburger"
+            />
           </div>
         </div>
       </div>
@@ -141,13 +145,17 @@ function Dashboard() {
       <div className="nav-items">
         {/* Dashboard link */}
         <NavLink to="/dashboard/home" className="nav-item">
-          <img src="/dashboard.png" alt="Menu" style={{ background: '#777' }} />
+          <img
+            src="/src/assets/dashboard.png"
+            alt="Menu"
+            style={{ background: '#777' }}
+          />
           <p>Dashboard</p>
         </NavLink>
 
         {/* Timeline link */}
         <NavLink to="/dashboard/timeline" className="nav-item">
-          <img src="/timeline.png" alt="Timeline" />
+          <img src="/src/assets/timeline.png" alt="Timeline" />
           <p>Timeline</p>
         </NavLink>
 
@@ -157,11 +165,11 @@ function Dashboard() {
           <p>Notifications</p>
         </NavLink> */}
         <div className="nav-item">
-          <img src="/notifications.png" alt="Notifications" />
+          <img src="/src/assets/notifications.png" alt="Notifications" />
           <p>Notifications</p>
         </div>
         <div className="nav-item">
-          <img src="/search.png" alt="Search" />
+          <img src="/src/assets/search.png" alt="Search" />
           <p>Search</p>
         </div>
 
@@ -173,7 +181,7 @@ function Dashboard() {
 
         {/* More link */}
         <NavLink to="/dashboard/more" className="nav-item">
-          <img src="/more.png" alt="More" />
+          <img src="/src/assets/more.png" alt="More" />
           <p>More</p>
         </NavLink>
       </div>
@@ -185,16 +193,16 @@ function Dashboard() {
       <>
         {profileSection()}
         <div className="card birthday-card">
-          <img src="/birthday.png" alt="Search" />
+          <img src="/src/assets/birthday.png" alt="Search" />
         </div>
         <div className="card birthday-card card-3">
-          <img src="/card3.png" alt="Search" />
+          <img src="/src/assets/card3.png" alt="Search" />
         </div>
         <div className="card birthday-card card-4">
-          <img src="/card4.png" alt="Search" />
+          <img src="/src/assets/card4.png" alt="Search" />
         </div>
         <div className="card birthday-card card-5">
-          <img src="/card5.png" alt="Search" />
+          <img src="/src/assets/card5.png" alt="Search" />
         </div>
         <div className="card birthday-card card-6">
           <img src="/card6.png" alt="Search" />

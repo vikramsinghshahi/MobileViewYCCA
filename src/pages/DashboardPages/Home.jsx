@@ -51,7 +51,7 @@ function Home() {
           />
         </div>
         <div className="avatar">
-          <img src="/avatar.png" alt="User Avatar" />
+          <img src="/src/assets/avatar.png" alt="User Avatar" />
         </div>
       </div>
     );
@@ -72,7 +72,7 @@ function Home() {
           {logoImage ? (
             <img src={logoImage} alt="YCCA Logo" />
           ) : (
-            <img src="/logo.png" alt="YCCA Logo" />
+            <img src="/src/assets/logo.png" alt="YCCA Logo" />
           )}
           {/* <img src="/logo.png" alt="YCCA Logo" /> */}
         </div>
@@ -81,7 +81,7 @@ function Home() {
           <div className="date">
             {formatDate()}
             <img
-              src="/hamburger.png"
+              src="/src/assets/hamburger.png"
               alt="YCCA Logo"
               className="hamburger"
               onClick={() => navigator('/')}
@@ -97,32 +97,32 @@ function Home() {
       <>
         {isParentLogin ? (
           <div className="card birthday-card">
-            <img src="/parentCard.png" alt="Search" />
+            <img src="/src/assets/parentCard.png" alt="Search" />
           </div>
         ) : (
           profileSection()
         )}
 
         <div className="card birthday-card">
-          <img src="/birthday.png" alt="Search" />
+          <img src="/src/assets/birthday.png" alt="Search" />
         </div>
         <div className="card birthday-card card-3">
-          <img src="/card3.png" alt="Search" />
+          <img src="/src/assets/card3.png" alt="Search" />
         </div>
         <div className="card birthday-card card-4">
-          <img src="/card4.png" alt="Search" />
+          <img src="/src/assets/card4.png" alt="Search" />
         </div>
         <div className="card birthday-card card-5">
-          <img src="/card5.png" alt="Search" />
+          <img src="/src/assets/card5.png" alt="Search" />
         </div>
         <div className="card birthday-card card-6">
-          <img src="/card6.png" alt="Search" />
+          <img src="/src/assets/card6.png" alt="Search" />
         </div>
         <div className="card birthday-card card-7">
-          <img src="/card7.png" alt="Search" />
+          <img src="/src/assets/card7.png" alt="Search" />
         </div>
         <div className="card birthday-card card-8">
-          <img src="/card8.png" alt="Search" />
+          <img src="/src/assets/card8.png" alt="Search" />
         </div>
       </>
     );
