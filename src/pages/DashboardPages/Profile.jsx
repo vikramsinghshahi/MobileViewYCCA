@@ -1,6 +1,15 @@
 import DataField from '../../Common/DataField/DataField';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import PProfile1 from '../../assets/p-profile1.png';
+import PProfile2 from '../../assets/p-profile2.png';
+import PProfile3 from '../../assets/p-profile3.png';
+import PProfile4 from '../../assets/p-profile4.png';
+import PAdmin1 from '../../assets/p-admin1.png';
+import PAdmin2 from '../../assets/p-admin2.png';
+import PAdmin3 from '../../assets/p-admin3.png';
+import Chat4 from '../../assets/chat4.png';
+import Chat5 from '../../assets/chat5.png';
 
 function Profile() {
   const navigate = useNavigate();
@@ -45,39 +54,39 @@ function Profile() {
         {isParentLogin ? (
           <>
             <button className="card">
-              <img src="/p-profile1.png" alt="Search" />
+              <img src={PProfile1} alt="Search" />
             </button>
             <div className="card">
-              <img src="/p-profile4.png" alt="Search" />
+              <img src={PProfile4} alt="Search" />
             </div>
             <button className="card">
-              <img src="/p-profile2.png" alt="Search" />
+              <img src={PProfile2} alt="Search" />
             </button>
             <div className="card">
-              <img src="/p-profile3.png" alt="Search" />
+              <img src={PProfile3} alt="Search" />
             </div>
           </>
         ) : (
           <>
             <button className="card">
-              <img src="/p-admin1.png" alt="Search" />
+              <img src={PAdmin1} alt="Search" />
             </button>
             <div className="card">
-              <img src="/p-admin3.png" alt="Search" />
+              <img src={PAdmin2} alt="Search" />
             </div>
             <button className="card">
-              <img src="/p-admin2.png" alt="Search" />
+              <img src={PAdmin3} alt="Search" />
             </button>
           </>
         )}
         <div className="card" style={{ visibility: 'hidden' }}>
-          <img src="/chat4.png" alt="Search" />
+          <img src={Chat4} alt="Search" />
         </div>
         <div className="card" style={{ visibility: 'hidden' }}>
-          <img src="/chat5.png" alt="Search" />
+          <img src={Chat5} alt="Search" />
         </div>
         <div className="card" style={{ visibility: 'hidden' }}>
-          <img src="/chat5.png" alt="Search" />
+          <img src={Chat5} alt="Search" />
         </div>
 
         {/* <div className="card  ">

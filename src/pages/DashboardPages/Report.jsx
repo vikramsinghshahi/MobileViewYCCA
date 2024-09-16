@@ -1,6 +1,7 @@
 import DataField from '../../Common/DataField/DataField';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Report1 from '../../assets/report1.png';
 
 function Report() {
   const navigate = useNavigate();
@@ -65,25 +66,25 @@ function Report() {
           className="card"
           onClick={() => navigate('/dashboard/report/1')}
         >
-          <img src="/report1.png" alt="Search" />
+          <img src={Report1} alt="Search" />
         </button>
         <button
           className="card "
           onClick={() => navigate('/dashboard/report/2')}
         >
-          <img src="/report1.png" alt="Search" />
+          <img src={Report1} alt="Search" />
         </button>
         <div className="card  ">
-          <img src="/report1.png" alt="Search" />
+          <img src={Report1} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/report1.png" alt="Search" />
+          <img src={Report1} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/report1.png" alt="Search" />
+          <img src={Report1} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/report1.png" alt="Search" />
+          <img src={Report1} alt="Search" />
         </div>
         {/* <div className="card  ">
           <img src="/More7.png" alt="Search" />
