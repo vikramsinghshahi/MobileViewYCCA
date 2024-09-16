@@ -487,6 +487,11 @@
     }
   }
 
+  .p-timeLinePageContent {
+    margin-top: 70px;
+    height: calc(100vh - 140px);
+  }
+
   .backBtn {
     border: none;
     display: block;

@@ -1,6 +1,8 @@
 import DataField from '../../Common/DataField/DataField';
+import React, { useState, useEffect } from 'react';
 
 function Timeline() {
+  const [isParentLogin, setUserLogin] = useState(null);
   const options = [
     { value: 'site-one', label: 'Site One' },
     { value: 'site-two', label: 'Site Two' },
@@ -12,27 +14,36 @@ function Timeline() {
     console.log('Selected option:', selectedOption);
   };
 
+  useEffect(() => {
+    const isParentLogin = localStorage.getItem('isParentLogin');
+    if (isParentLogin === 'true') {
+      setUserLogin(true);
+    }
+  }, []);
+
   const header = () => {
     return (
       <div className="header timelinePageHeader">
         <h1>Timeline</h1>
-        <div className="filter">
-          <DataField
-            optionsData={options}
-            defaultValue={options[0]}
-            label=""
-            onChange={handleSelectChange}
-            className="custom-select"
-          />
-          <DataField
-            optionsData={options}
-            defaultValue={options[0]}
-            label=""
-            onChange={handleSelectChange}
-            className="custom-select"
-          />
-          <p className="text">Reset</p>
-        </div>
+        {!isParentLogin && (
+          <div className="filter">
+            <DataField
+              optionsData={options}
+              defaultValue={options[0]}
+              label=""
+              onChange={handleSelectChange}
+              className="custom-select"
+            />
+            <DataField
+              optionsData={options}
+              defaultValue={options[0]}
+              label=""
+              onChange={handleSelectChange}
+              className="custom-select"
+            />
+            <p className="text">Reset</p>
+          </div>
+        )}
       </div>
     );
   };
@@ -95,7 +106,13 @@ function Timeline() {
   return (
     <>
       {header()}
-      <div className="main-content timeLinePageContent">{renderCards()}</div>
+      <div
+        className={`main-content timeLinePageContent ${
+          isParentLogin && 'p-timeLinePageContent'
+        }`}
+      >
+        {renderCards()}
+      </div>
     </>
   );
 }
