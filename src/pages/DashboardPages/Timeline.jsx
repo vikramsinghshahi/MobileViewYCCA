@@ -1,5 +1,11 @@
 import DataField from '../../Common/DataField/DataField';
 import React, { useState, useEffect } from 'react';
+import Tcard1 from '../../assets/tcard1.png';
+import Tcard2 from '../../assets/tcard2.png';
+import Tcard3 from '../../assets/tcard3.png';
+import Tcard4 from '../../assets/tcard4.png';
+import Tcard5 from '../../assets/tcard5.png';
+import Tcard6 from '../../assets/tcard6.png';
 
 function Timeline() {
   const [isParentLogin, setUserLogin] = useState(null);
@@ -52,22 +58,22 @@ function Timeline() {
     return (
       <>
         <div className="card ">
-          <img src="/tcard1.png" alt="Search" />
+          <img src={Tcard1} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/tcard2.png" alt="Search" />
+          <img src={Tcard2} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/tcard3.png" alt="Search" />
+          <img src={Tcard3} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/tcard4.png" alt="Search" />
+          <img src={Tcard4} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/tcard5.png" alt="Search" />
+          <img src={Tcard5} alt="Search" />
         </div>
         <div className="card  ">
-          <img src="/tcard6.png" alt="Search" />
+          <img src={Tcard6} alt="Search" />
         </div>
         {/* <div className="card  ">
           <img src="/More7.png" alt="Search" />
