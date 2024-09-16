@@ -1,8 +1,10 @@
 import DataField from '../../Common/DataField/DataField';
 import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 function Chats() {
   const navigate = useNavigate();
+  const [isParentLogin, setUserLogin] = useState(null);
   const options = [
     { value: 'site-one', label: 'Site One' },
     { value: 'site-two', label: 'Site Two' },
@@ -13,6 +15,13 @@ function Chats() {
   const handleSelectChange = (selectedOption) => {
     console.log('Selected option:', selectedOption);
   };
+
+  useEffect(() => {
+    const isParentLogin = localStorage.getItem('isParentLogin');
+    if (isParentLogin === 'true') {
+      setUserLogin(true);
+    }
+  }, []);
 
   const header = () => {
     return (
@@ -26,23 +35,25 @@ function Chats() {
           </button>
         </div>
         <h1>Chats</h1>
-        <div className="filter">
-          <DataField
-            optionsData={options}
-            defaultValue={options[0]}
-            label=""
-            onChange={handleSelectChange}
-            className="custom-select"
-          />
-          <DataField
-            optionsData={options}
-            defaultValue={options[0]}
-            label=""
-            onChange={handleSelectChange}
-            className="custom-select"
-          />
-          <p className="text">Reset</p>
-        </div>
+        {!isParentLogin && (
+          <div className="filter">
+            <DataField
+              optionsData={options}
+              defaultValue={options[0]}
+              label=""
+              onChange={handleSelectChange}
+              className="custom-select"
+            />
+            <DataField
+              optionsData={options}
+              defaultValue={options[0]}
+              label=""
+              onChange={handleSelectChange}
+              className="custom-select"
+            />
+            <p className="text">Reset</p>
+          </div>
+        )}
       </div>
     );
   };
@@ -106,7 +117,11 @@ function Chats() {
   return (
     <>
       {header()}
-      <div className="main-content timeLinePageContent adjustHeight">
+      <div
+        className={`main-content timeLinePageContent ${
+          isParentLogin ? 'p-adjustHeight' : 'adjustHeight'
+        }`}
+      >
         {renderCards()}
       </div>
     </>

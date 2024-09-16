@@ -1,8 +1,10 @@
 import DataField from '../../Common/DataField/DataField';
 import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 function SingleAnnouncement() {
   const navigate = useNavigate();
+  const [isParentLogin, setUserLogin] = useState(null);
   const options = [
     { value: 'site-one', label: 'Site One' },
     { value: 'site-two', label: 'Site Two' },
@@ -14,18 +16,29 @@ function SingleAnnouncement() {
     console.log('Selected option:', selectedOption);
   };
 
+  useEffect(() => {
+    const isParentLogin = localStorage.getItem('isParentLogin');
+    if (isParentLogin === 'true') {
+      setUserLogin(true);
+    }
+  }, []);
   const header = () => {
     return (
       <div className="header timelinePageHeader">
         <div>
           <button
             className="backBtn smallFont"
-            onClick={() => navigate('/dashboard/more')}
+            onClick={() => navigate('/dashboard/announcement')}
           >
             &lt; Back
           </button>
         </div>
-        <h1>Announcement</h1>
+        {isParentLogin ? (
+          <h1>Happy Last Day Of School</h1>
+        ) : (
+          <h1>Announcement</h1>
+        )}
+
         {/* <div className="filter">
           <DataField
             optionsData={options}
@@ -105,7 +118,11 @@ function SingleAnnouncement() {
   return (
     <>
       {header()}
-      <div className="main-content timeLinePageContent singleAnnouncement">
+      <div
+        className={`main-content timeLinePageContent ${
+          isParentLogin ? 'p-singleAnnouncement' : 'singleAnnouncement'
+        }`}
+      >
         {/* {renderCards()} */}
       </div>
     </>

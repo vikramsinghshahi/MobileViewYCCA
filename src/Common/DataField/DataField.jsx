@@ -7,7 +7,6 @@ const DataField = (props) => {
   const { optionsData, defaultValue, label, onChange, className } = props;
   // useState hook to manage selected option
   const [selectedOption, setSelectedOption] = useState(defaultValue || null);
-  console.log(label);
 
   // Function to handle option change
   const handleChange = (selectedOption) => {

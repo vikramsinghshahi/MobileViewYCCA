@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 function More() {
   const [backgroundImage, setBackgroundImage] = useState(null);
+  const [isParentLogin, setUserLogin] = useState(null);
   const navigate = useNavigate();
   const header = () => {
     return (
@@ -27,6 +28,15 @@ function More() {
       setBackgroundImage(savedImage);
     }
   }, []);
+
+  useEffect(() => {
+    const isParentLogin = localStorage.getItem('isParentLogin');
+    if (isParentLogin === 'true') {
+      setUserLogin(true);
+    }
+  }, []);
+
+  console.log(isParentLogin);
 
   const renderCards = () => {
     return (
@@ -55,24 +65,38 @@ function More() {
         <div className="card  ">
           <img src="/More6.png" alt="Search" />
         </div>
-        <div className="card  ">
-          <img src="/More7.png" alt="Search" />
-        </div>
-        <div className="card  ">
-          <img src="/More8.png" alt="Search" />
-        </div>
         <div className="card ">
           <img src="/More9.png" alt="Search" />
         </div>
-        <div className="card  ">
-          <img src="/More10.png" alt="Search" />
-        </div>
-        <div className="card  ">
-          <img src="/More11.png" alt="Search" />
-        </div>
-        <div className="card  ">
-          <img src="/More12.png" alt="Search" />
-        </div>
+        {!isParentLogin ? (
+          <>
+            <div className="card  ">
+              <img src="/More7.png" alt="Search" />
+            </div>
+            <div className="card  ">
+              <img src="/More8.png" alt="Search" />
+            </div>
+
+            <div className="card  ">
+              <img src="/More10.png" alt="Search" />
+            </div>
+            <div className="card  ">
+              <img src="/More11.png" alt="Search" />
+            </div>
+            <div className="card  ">
+              <img src="/More12.png" alt="Search" />
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="card">
+              <img src="/Fee.png" alt="Search" />
+            </div>
+            <div className="card">
+              <img src="/Gallery.png" alt="Search" />
+            </div>
+          </>
+        )}
         <div className="card  ">
           <img src="/More13.png" alt="Search" />
         </div>
@@ -84,6 +108,9 @@ function More() {
         </div>
         <div className="card  ">
           <img src="/More16.png" alt="Search" />
+        </div>
+        <div className="card" style={{ pointerEvents: 'none' }}>
+          {/* <img src="/More16.png" alt="Search" /> */}
         </div>
       </div>
     );

@@ -4,12 +4,20 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const [logoImage, setLogoImage] = useState(null);
+  const [isParentLogin, setUserLogin] = useState(null);
   const navigator = useNavigate();
 
   useEffect(() => {
     const savedImage = localStorage.getItem('logo-image');
     if (savedImage) {
       setLogoImage(savedImage);
+    }
+  }, []);
+
+  useEffect(() => {
+    const isParentLogin = localStorage.getItem('isParentLogin');
+    if (isParentLogin === 'true') {
+      setUserLogin(true);
     }
   }, []);
 
@@ -87,7 +95,14 @@ function Home() {
   const renderCards = () => {
     return (
       <>
-        {profileSection()}
+        {isParentLogin ? (
+          <div className="card birthday-card">
+            <img src="/parentCard.png" alt="Search" />
+          </div>
+        ) : (
+          profileSection()
+        )}
+
         <div className="card birthday-card">
           <img src="/birthday.png" alt="Search" />
         </div>

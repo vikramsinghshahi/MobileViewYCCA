@@ -20,7 +20,7 @@ function SingleChat() {
         <div>
           <button
             className="backBtn smallFont"
-            onClick={() => navigate('/dashboard/more')}
+            onClick={() => navigate('/dashboard/chats')}
           >
             &lt; Back
           </button>

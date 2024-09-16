@@ -37,6 +37,7 @@ function Login() {
     e.preventDefault();
     // Handle form submission logic here
     navigate('/dashboard');
+    localStorage.setItem(`isParentLogin`, false);
     console.log({ email, password, consent });
   };
 
@@ -105,6 +106,15 @@ function Login() {
           </a>
           <a href="/set-theme" className="login-other">
             Set Theme
+          </a>
+          <a
+            href="/dashboard"
+            className="login-other"
+            onClick={() => {
+              localStorage.setItem(`isParentLogin`, true);
+            }}
+          >
+            Parent Login
           </a>
         </form>
       </div>
