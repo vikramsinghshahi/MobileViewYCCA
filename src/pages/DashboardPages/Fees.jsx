@@ -1,6 +1,10 @@
 import DataField from '../../Common/DataField/DataField';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import Fees1 from '../../assets/fees.png';
+import Chat3 from '../../assets/chat3.png';
+import Chat4 from '../../assets/chat4.png';
+import Chat5 from '../../assets/chat5.png';
 
 function Fees() {
   const navigate = useNavigate();
@@ -62,22 +66,22 @@ function Fees() {
     return (
       <>
         <button className="card" onClick={() => navigate('/dashboard/fees/1')}>
-          <img src="/fees.png" alt="Search" />
+          <img src={Fees1} alt="Search" />
         </button>
         <button className="card" onClick={() => navigate('/dashboard/fees/2')}>
-          <img src="/fees.png" alt="Search" />
+          <img src={Fees1} alt="Search" />
         </button>
         <div className="card" style={{ visibility: 'hidden' }}>
-          <img src="/chat3.png" alt="Search" />
+          <img src={Chat3} alt="Search" />
         </div>
         <div className="card" style={{ visibility: 'hidden' }}>
-          <img src="/chat4.png" alt="Search" />
+          <img src={Chat4} alt="Search" />
         </div>
         <div className="card" style={{ visibility: 'hidden' }}>
-          <img src="/chat5.png" alt="Search" />
+          <img src={Chat5} alt="Search" />
         </div>
         <div className="card" style={{ visibility: 'hidden' }}>
-          <img src="/chat5.png" alt="Search" />
+          <img src={Chat5} alt="Search" />
         </div>
 
         {/* <div className="card  ">
