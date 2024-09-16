@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logo.png';
 import './Pages.scss';
 
 function Home() {
@@ -28,7 +29,7 @@ function Home() {
         {logoImage ? (
           <img src={logoImage} alt="YCCA Logo" className="logo" />
         ) : (
-          <img src="/src/assets/logo.png" alt="YCCA Logo" className="logo" />
+          <img src={logo} alt="YCCA Logo" className="logo" />
         )}
 
         <h1>Welcome</h1>

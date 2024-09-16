@@ -1,6 +1,18 @@
 import DataField from '../../Common/DataField/DataField';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../assets/logo.png';
+import Hamburger from '../../assets/hamburger.png';
+import Avatar from '../../assets/avatar.png';
+import ParentCard from '../../assets/parentCard.png';
+import BirthdayPng from '../../assets/birthday.png';
+import Card3Png from '../../assets/card3.png';
+import Card4Png from '../../assets/card4.png';
+import Card5Png from '../../assets/card5.png';
+import Card6Png from '../../assets/card6.png';
+import Card7Png from '../../assets/card7.png';
+import Card8Png from '../../assets/card8.png';
+
 const { BASE_URL } = import.meta.env;
 
 function Home() {
@@ -54,7 +66,7 @@ function Home() {
           />
         </div>
         <div className="avatar">
-          <img src="/src/assets/avatar.png" alt="User Avatar" />
+          <img src={Avatar} alt="User Avatar" />
         </div>
       </div>
     );
@@ -75,7 +87,7 @@ function Home() {
           {logoImage ? (
             <img src={logoImage} alt="YCCA Logo" />
           ) : (
-            <img src="/src/assets/logo.png" alt="YCCA Logo" />
+            <img src={logo} alt="YCCA Logo" />
           )}
           {/* <img src="/logo.png" alt="YCCA Logo" /> */}
         </div>
@@ -84,7 +96,7 @@ function Home() {
           <div className="date">
             {formatDate()}
             <img
-              src="/src/assets/hamburger.png"
+              src={Hamburger}
               alt="YCCA Logo"
               className="hamburger"
               onClick={() => navigator('/')}
@@ -100,32 +112,32 @@ function Home() {
       <>
         {isParentLogin ? (
           <div className="card birthday-card">
-            <img src="/src/assets/parentCard.png" alt="Search" />
+            <img src={ParentCard} alt="Search" />
           </div>
         ) : (
           profileSection()
         )}
 
         <div className="card birthday-card">
-          <img src="/src/assets/birthday.png" alt="Search" />
+          <img src={BirthdayPng} alt="Birthday" />
         </div>
         <div className="card birthday-card card-3">
-          <img src="/src/assets/card3.png" alt="Search" />
+          <img src={Card3Png} alt="Card 3" />
         </div>
         <div className="card birthday-card card-4">
-          <img src="/src/assets/card4.png" alt="Search" />
+          <img src={Card4Png} alt="Card 4" />
         </div>
         <div className="card birthday-card card-5">
-          <img src="/src/assets/card5.png" alt="Search" />
+          <img src={Card5Png} alt="Card 5" />
         </div>
         <div className="card birthday-card card-6">
-          <img src="/src/assets/card6.png" alt="Search" />
+          <img src={Card6Png} alt="Card 6" />
         </div>
         <div className="card birthday-card card-7">
-          <img src="/src/assets/card7.png" alt="Search" />
+          <img src={Card7Png} alt="Card 7" />
         </div>
         <div className="card birthday-card card-8">
-          <img src="/src/assets/card8.png" alt="Search" />
+          <img src={Card8Png} alt="Card 8" />
         </div>
       </>
     );

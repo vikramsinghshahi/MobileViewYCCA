@@ -10,7 +10,7 @@ const basename =
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <ThemeProvider>
         <App />
       </ThemeProvider>
