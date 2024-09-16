@@ -8,11 +8,9 @@ import NotFound from './pages/NotFound';
 import SetTheme from './pages/SetTheme';
 
 function App() {
-  const basename =
-    import.meta.env.MODE === 'production' ? '/MobileViewYCCA' : '/';
   return (
     <div id="App">
-      <Routes basename={basename}>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/set-theme" element={<SetTheme />} />
