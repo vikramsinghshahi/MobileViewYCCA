@@ -36,10 +36,29 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    navigate('/dashboard');
-    localStorage.setItem(`isParentLogin`, false);
-    console.log({ email, password, consent });
+    // // Handle form submission logic here
+    // navigate('/dashboard');
+    // localStorage.setItem(`isParentLogin`, false);
+    // console.log({ email, password, consent });
+
+    const normalizedEmail = email.trim().toLowerCase();
+
+    // Check for specific roles and navigate accordingly
+    if (normalizedEmail === 'admin') {
+      navigate('/dashboard');
+      localStorage.setItem(`isParentLogin`, false);
+    } else if (normalizedEmail === 'parent') {
+      localStorage.setItem('isParentLogin', true);
+      navigate('/dashboard');
+    } else if (
+      normalizedEmail === 'superadmin' ||
+      normalizedEmail === 'super admin'
+    ) {
+      navigate('/set-theme');
+    } else {
+      // Handle incorrect username or other cases (if needed)
+      alert('Invalid username');
+    }
   };
 
   return (
@@ -62,7 +81,7 @@ function Login() {
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <input
-              type="email"
+              type="text"
               placeholder="Email / Username"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -102,7 +121,7 @@ function Login() {
 
           <button className="btn btn-faceid">Sign In with Face ID</button>
 
-          <NavLink to="#" className="login-other">
+          {/* <NavLink to="#" className="login-other">
             Login with another user
           </NavLink>
           <NavLink to="/set-theme" className="login-other">
@@ -116,7 +135,7 @@ function Login() {
             }}
           >
             Parent Login
-          </NavLink>
+          </NavLink> */}
         </form>
       </div>
 

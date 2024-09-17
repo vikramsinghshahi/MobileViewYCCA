@@ -72,10 +72,10 @@ function Profile() {
               <img src={PAdmin1} alt="Search" />
             </button>
             <div className="card">
-              <img src={PAdmin2} alt="Search" />
+              <img src={PAdmin3} alt="Search" />
             </div>
             <button className="card">
-              <img src={PAdmin3} alt="Search" />
+              <img src={PAdmin2} alt="Search" />
             </button>
           </>
         )}
