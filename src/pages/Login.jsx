@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import './Pages.scss';
 
@@ -102,21 +102,21 @@ function Login() {
 
           <button className="btn btn-faceid">Sign In with Face ID</button>
 
-          <a href="#" className="login-other">
+          <NavLink to="#" className="login-other">
             Login with another user
-          </a>
-          <a href="/set-theme" className="login-other">
+          </NavLink>
+          <NavLink to="/set-theme" className="login-other">
             Set Theme
-          </a>
-          <a
-            href="/dashboard"
+          </NavLink>
+          <NavLink
+            to="/dashboard"
             className="login-other"
             onClick={() => {
-              localStorage.setItem(`isParentLogin`, true);
+              localStorage.setItem('isParentLogin', true);
             }}
           >
             Parent Login
-          </a>
+          </NavLink>
         </form>
       </div>
 
