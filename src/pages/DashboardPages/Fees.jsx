@@ -2,6 +2,7 @@ import DataField from '../../Common/DataField/DataField';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import Fees1 from '../../assets/fees.png';
+import Fees10 from '../../assets/fee10.png';
 import Chat3 from '../../assets/chat3.png';
 import Chat4 from '../../assets/chat4.png';
 import Chat5 from '../../assets/chat5.png';
@@ -69,7 +70,7 @@ function Fees() {
           <img src={Fees1} alt="Search" />
         </button>
         <button className="card" onClick={() => navigate('/dashboard/fees/2')}>
-          <img src={Fees1} alt="Search" />
+          <img src={Fees10} alt="Search" />
         </button>
         <div className="card" style={{ visibility: 'hidden' }}>
           <img src={Chat3} alt="Search" />

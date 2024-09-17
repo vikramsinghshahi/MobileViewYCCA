@@ -42,6 +42,10 @@ function SingleFee() {
         <button className="card">
           <img src={Fee1} alt="Search" />
         </button>
+        <div className="fee-btn-conatiner">
+          <button className="active">Fee Due</button>
+          <button>Fee Paid</button>
+        </div>
         {/* <button className="card">
           <img src="/fees.png" alt="Search" />
         </button> */}
