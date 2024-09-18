@@ -1,6 +1,7 @@
 import DataField from '../../Common/DataField/DataField';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import BackIcon from '../../Common/Icons/Back';
 
 function SingleAnnouncement() {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ function SingleAnnouncement() {
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/announcement')}
           >
-            &lt; Back
+            <BackIcon /> Back
           </button>
         </div>
         {isParentLogin ? (

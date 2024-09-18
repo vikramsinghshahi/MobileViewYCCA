@@ -9,6 +9,7 @@ import Fee18 from '../../assets/fee18.png';
 import Fee19 from '../../assets/fee19.png';
 import Fee20 from '../../assets/fee20.png';
 import Fee8 from '../../assets/fee8.png';
+import BackIcon from '../../Common/Icons/Back';
 
 function FeeBreakUp() {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ function FeeBreakUp() {
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/fees/:id')}
           >
-            &lt; Back
+            <BackIcon /> Back
           </button>
         </div>
         <h1>Fee Break Up</h1>

@@ -6,6 +6,7 @@ import Tcard3 from '../../assets/tcard3.png';
 import Tcard4 from '../../assets/tcard4.png';
 import Tcard5 from '../../assets/tcard5.png';
 import Tcard6 from '../../assets/tcard6.png';
+import ResetIcon from '../../Common/Icons/Reset';
 
 function Timeline() {
   const [isParentLogin, setUserLogin] = useState(null);
@@ -47,7 +48,9 @@ function Timeline() {
               onChange={handleSelectChange}
               className="custom-select"
             />
-            <p className="text">Reset</p>
+            <p className="text">
+              <ResetIcon />
+            </p>
           </div>
         )}
       </div>

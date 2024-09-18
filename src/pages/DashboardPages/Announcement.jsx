@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PAnnouneCard from '../../assets/PAnnouneCard.png';
 import Announc from '../../assets/announc.png';
+import BackIcon from '../../Common/Icons/Back';
+import ResetIcon from '../../Common/Icons/Reset';
 
 function Announcement() {
   const navigate = useNavigate();
@@ -33,7 +35,7 @@ function Announcement() {
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/more')}
           >
-            &lt; Back
+            <BackIcon /> Back
           </button>
         </div>
         <h1>Announcement</h1>
@@ -53,7 +55,9 @@ function Announcement() {
               onChange={handleSelectChange}
               className="custom-select"
             />
-            <p className="text">Reset</p>
+            <p className="text">
+              <ResetIcon />
+            </p>
           </div>
         )}
       </div>

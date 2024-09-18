@@ -9,6 +9,7 @@ import Fee15 from '../../assets/fee15.png';
 import Fee16 from '../../assets/fee16.png';
 import Fee17 from '../../assets/fee17.png';
 import Fee8 from '../../assets/fee8.png';
+import BackIcon from '../../Common/Icons/Back';
 
 function SingleFee() {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ function SingleFee() {
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/fees')}
           >
-            &lt; Back
+            <BackIcon /> Back
           </button>
         </div>
         <h1>Fees</h1>

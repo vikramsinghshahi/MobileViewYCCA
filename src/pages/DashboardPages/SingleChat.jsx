@@ -1,5 +1,6 @@
 import DataField from '../../Common/DataField/DataField';
 import { useNavigate } from 'react-router-dom';
+import BackIcon from '../../Common/Icons/Back';
 
 function SingleChat() {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ function SingleChat() {
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/chats')}
           >
-            &lt; Back
+            <BackIcon /> Back
           </button>
         </div>
         <h1>Chat</h1>

@@ -80,7 +80,7 @@ function Login() {
 
   return (
     <div className="page login" style={containerStyle}>
-      <div className="flex">
+      <div className="flex login-flex">
         <div className="header">
           {logoImage ? (
             <img src={logoImage} alt="YCCA Logo" className="logo" />

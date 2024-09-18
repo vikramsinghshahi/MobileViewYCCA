@@ -6,6 +6,8 @@ import Chat2 from '../../assets/chat2.png';
 import Chat3 from '../../assets/chat3.png';
 import Chat4 from '../../assets/chat4.png';
 import Chat5 from '../../assets/chat5.png';
+import BackIcon from '../../Common/Icons/Back';
+import ResetIcon from '../../Common/Icons/Reset';
 
 function Chats() {
   const navigate = useNavigate();
@@ -36,7 +38,7 @@ function Chats() {
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/more')}
           >
-            &lt; Back
+            <BackIcon /> Back
           </button>
         </div>
         <h1>Chats</h1>
@@ -56,7 +58,9 @@ function Chats() {
               onChange={handleSelectChange}
               className="custom-select"
             />
-            <p className="text">Reset</p>
+            <p className="text">
+              <ResetIcon />
+            </p>
           </div>
         )}
       </div>

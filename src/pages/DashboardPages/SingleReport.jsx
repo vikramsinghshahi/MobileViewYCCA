@@ -1,5 +1,6 @@
 import DataField from '../../Common/DataField/DataField';
 import { useNavigate } from 'react-router-dom';
+import BackIcon from '../../Common/Icons/Back';
 
 function SingleReport() {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ function SingleReport() {
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/report')}
           >
-            &lt; Back
+            <BackIcon /> Back
           </button>
         </div>
         <h1>Rebecca Girardi</h1>

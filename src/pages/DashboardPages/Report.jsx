@@ -2,6 +2,8 @@ import DataField from '../../Common/DataField/DataField';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Report1 from '../../assets/report1.png';
+import ResetIcon from '../../Common/Icons/Reset';
+import BackIcon from '../../Common/Icons/Back';
 
 function Report() {
   const navigate = useNavigate();
@@ -32,7 +34,7 @@ function Report() {
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/more')}
           >
-            &lt; Back
+            <BackIcon /> Back
           </button>
         </div>
         <h1>Report</h1>
@@ -52,7 +54,10 @@ function Report() {
               onChange={handleSelectChange}
               className="custom-select"
             />
-            <p className="text">Reset</p>
+            <p className="text">
+              {' '}
+              <ResetIcon />
+            </p>
           </div>
         )}
       </div>

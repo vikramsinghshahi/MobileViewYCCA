@@ -10,6 +10,7 @@ import PAdmin2 from '../../assets/p-admin2.png';
 import PAdmin3 from '../../assets/p-admin3.png';
 import Chat4 from '../../assets/chat4.png';
 import Chat5 from '../../assets/chat5.png';
+import BackIcon from '../../Common/Icons/Back';
 
 function Profile() {
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ function Profile() {
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/more')}
           >
-            &lt; More
+            <BackIcon /> More
           </button>
         </div>
         <h1>Profile</h1>

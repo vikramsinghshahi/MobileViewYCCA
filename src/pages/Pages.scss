@@ -152,6 +152,12 @@
   }
 }
 
+.login {
+  .login-flex {
+    width: 90%;
+  }
+}
+
 .dashboard {
   background-color: #f5f5f5;
   overflow: hidden;
@@ -331,6 +337,7 @@
       width: 25%;
       border-top: 4px solid transparent;
       padding: 6px 0px;
+      padding-top: 4px;
       // font-size: 24px; /* Adjust icon size */
       // margin-bottom: 5px;
       /* Move the icon upwards */
@@ -535,6 +542,8 @@
     background-color: transparent;
     margin: 5px 10px;
     margin-bottom: 0px;
+    display: flex;
+    align-items: center;
   }
 
   .adjustHeight {
