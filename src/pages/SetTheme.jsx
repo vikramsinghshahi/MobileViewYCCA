@@ -55,6 +55,7 @@ function SetTheme() {
 
     changeTheme(null, null);
     setImage(null);
+    setLogo(null);
   };
 
   const bottomNav = () => (
