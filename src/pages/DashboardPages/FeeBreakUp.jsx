@@ -27,7 +27,7 @@ function FeeBreakUp() {
         <div>
           <button
             className="backBtn smallFont"
-            onClick={() => navigate('/dashboard/fees')}
+            onClick={() => navigate('/dashboard/fees/:id')}
           >
             &lt; Back
           </button>

@@ -50,15 +50,18 @@ function SingleFee() {
         {/* <button className="card">
           <img src="/fees.png" alt="Search" />
         </button> */}
-        <div className="card">
+        <button className="card">
           <img src={Fee16} alt="Search" />
-        </div>
+        </button>
         <div className="card">
           <img src={Fee17} alt="Search" />
         </div>
-        <div className="card">
+        <button
+          className="card"
+          onClick={() => navigate('/dashboard/fees/1/fee-breakup')}
+        >
           <img src={Fee11} alt="Search" />
-        </div>
+        </button>
         <div className="card">
           <img src={Fee12} alt="Search" />
         </div>
