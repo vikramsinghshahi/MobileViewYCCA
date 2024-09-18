@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../ThemeProvider';
 import Wheel from '@uiw/react-color-wheel';
@@ -6,6 +6,16 @@ import { hsvaToHex } from '@uiw/color-convert';
 // import { hsvaToHex } from '@uiw/color-convert';
 // import { ColorWheel } from 'react-color-wheel';
 import './Pages.scss';
+
+function debounce(func, delay) {
+  let timeoutId;
+  return function (...args) {
+    if (timeoutId) clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
 
 function SetTheme() {
   const { theme, changeTheme } = useTheme();
@@ -15,6 +25,9 @@ function SetTheme() {
   const { primaryThemeColor } = theme || {};
   const [hsva, setHsva] = useState({ h: 214, s: 43, v: 90, a: 1 });
   const navigate = useNavigate();
+
+  const fileInput1 = useRef(null); // Ref for the first file input
+  const fileInput2 = useRef(null); //
 
   useEffect(() => {
     const savedImage = localStorage.getItem('school-photo-image');
@@ -28,15 +41,39 @@ function SetTheme() {
   }, []);
 
   // console.log({ props, color }, 'line 9');
+  const handleReset = () => {
+    // Clear the localStorage
+    localStorage.clear();
+
+    // Clear the file inputs by accessing the refs
+    if (fileInput1.current) {
+      fileInput1.current.value = '';
+    }
+    if (fileInput2.current) {
+      fileInput2.current.value = '';
+    }
+
+    changeTheme(null, null);
+    setImage(null);
+  };
 
   const bottomNav = () => (
     <div className="bottom-nav">
       {/* Navigation Icons */}
-      <button className="previewBtn">Preview</button>
+      <button className="previewBtn" onClick={() => handleReset()}>
+        Reset
+      </button>
       <button className="saveBtn" onClick={() => navigate('/')}>
         Update
       </button>
     </div>
+  );
+
+  const debouncedChangeTheme = useCallback(
+    debounce((color, darkerValue) => {
+      changeTheme(color, darkerValue); // Your changeTheme function
+    }, 300),
+    [changeTheme]
   );
 
   const type = 'school-photo';
@@ -86,6 +123,11 @@ function SetTheme() {
     }
   };
 
+  const getDarkerShade = (color) => {
+    const darkerValue = Math.max(0, color.v - color.v * 0.5); // Reduce brightness by 20%
+    return { ...color, v: darkerValue }; // Return the darker color in HSVA format
+  };
+
   return (
     <div className="page dashboard themePage">
       <div className="header timelinePageHeader">
@@ -111,6 +153,7 @@ function SetTheme() {
                 type="file"
                 accept="image/*"
                 id="logoUploadInput"
+                ref={fileInput1}
                 onChange={handlelogoUpload}
                 style={{ display: 'none' }} // Hide the input
               />
@@ -133,6 +176,7 @@ function SetTheme() {
                 type="file"
                 accept="image/*"
                 id="imageUploadInput"
+                ref={fileInput2}
                 onChange={handleImageUpload}
                 style={{ display: 'none' }} // Hide the input
               />
@@ -165,7 +209,16 @@ function SetTheme() {
           <div className="wheel">
             <Wheel
               color={hsva}
-              onChange={(color) => setHsva({ ...hsva, ...color.hsva })}
+              onChange={(color) => {
+                setHsva({ ...hsva, ...color.hsva });
+
+                const darkerValue = getDarkerShade(color.hsva);
+
+                debouncedChangeTheme(
+                  hsvaToHex(color.hsva),
+                  hsvaToHex(darkerValue)
+                );
+              }}
             />
           </div>
           {/* <p>Selected Color: {hsvaToHex(hsva)} </p> */}

@@ -22,17 +22,23 @@ import TimelinePng from '../assets/timeline.png';
 import NotificationsPng from '../assets/notifications.png';
 import SearchPng from '../assets/search.png';
 import MorePng from '../assets/more.png';
+import DashboardIcon from '../Common/Icons/Dashboard';
+import MoreIcon from '../Common/Icons/More';
+import TimelineIcon from '../Common/Icons/Timeline';
+import FeeBreakUp from './DashboardPages/FeeBreakUp';
 
 function Dashboard() {
   const bottomNav = () => (
     <div className="bottom-nav">
       <div className="nav-items">
         <NavLink to="/dashboard/home" className="nav-item">
-          <img src={DashboardPng} alt="Menu" style={{ background: '#777' }} />
+          <DashboardIcon width="24" height="24" />
+          {/* <img src={DashboardPng} alt="Menu" /> */}
           <p>Dashboard</p>
         </NavLink>
         <NavLink to="/dashboard/timeline" className="nav-item">
-          <img src={TimelinePng} alt="Timeline" />
+          {/* <img src={TimelinePng} alt="Timeline" /> */}
+          <TimelineIcon />
           <p>Timeline</p>
         </NavLink>
 
@@ -45,7 +51,8 @@ function Dashboard() {
           <p>Search</p>
         </div>
         <NavLink to="/dashboard/more" className="nav-item">
-          <img src={MorePng} alt="More" />
+          {/* <img src={MorePng} alt="More" /> */}
+          <MoreIcon />
           <p>More</p>
         </NavLink>
       </div>
@@ -69,6 +76,7 @@ function Dashboard() {
         <Route path="chats/:id" element={<SingleChat />} />
         <Route path="fees" element={<Fees />} />
         <Route path="fees/:id" element={<SingleFee />} />
+        <Route path="fees/:id/fee-breakup" element={<FeeBreakUp />} />
         <Route path="profile" element={<Profile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

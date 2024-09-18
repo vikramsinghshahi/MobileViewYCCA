@@ -5,12 +5,12 @@ import Fee11 from '../../assets/fee11.png';
 import Fee12 from '../../assets/fee12.png';
 import Fee13 from '../../assets/fee13.png';
 import Fee14 from '../../assets/fee14.png';
-import Fee15 from '../../assets/fee15.png';
-import Fee16 from '../../assets/fee16.png';
-import Fee17 from '../../assets/fee17.png';
+import Fee18 from '../../assets/fee18.png';
+import Fee19 from '../../assets/fee19.png';
+import Fee20 from '../../assets/fee20.png';
 import Fee8 from '../../assets/fee8.png';
 
-function SingleFee() {
+function FeeBreakUp() {
   const navigate = useNavigate();
   const [isParentLogin, setUserLogin] = useState(null);
 
@@ -32,7 +32,7 @@ function SingleFee() {
             &lt; Back
           </button>
         </div>
-        <h1>Fees</h1>
+        <h1>Fee Break Up</h1>
       </div>
     );
   };
@@ -41,36 +41,36 @@ function SingleFee() {
     return (
       <>
         <button className="card">
-          <img src={Fee1} alt="Search" />
+          <img src={Fee18} alt="Search" />
         </button>
-        <div className="fee-btn-conatiner">
+        {/* <div className="fee-btn-conatiner">
           <button className="active">Fee Due</button>
           <button>Fee Paid</button>
-        </div>
+        </div> */}
         {/* <button className="card">
           <img src="/fees.png" alt="Search" />
         </button> */}
         <div className="card">
-          <img src={Fee16} alt="Search" />
+          <img src={Fee19} alt="Search" />
         </div>
         <div className="card">
-          <img src={Fee17} alt="Search" />
+          <img src={Fee20} alt="Search" />
         </div>
-        <div className="card">
+        <div className="card" style={{ visibility: 'hidden' }}>
           <img src={Fee11} alt="Search" />
         </div>
-        <div className="card">
+        <div className="card" style={{ visibility: 'hidden' }}>
           <img src={Fee12} alt="Search" />
         </div>
-        <div className="card">
+        <div className="card" style={{ visibility: 'hidden' }}>
           <img src={Fee13} alt="Search" />
         </div>
-        <div className="card">
+        <div className="card" style={{ visibility: 'hidden' }}>
           <img src={Fee14} alt="Search" />
         </div>
-        <div className="card">
+        {/* <div className="card">
           <img src={Fee15} alt="Search" />
-        </div>
+        </div> */}
         {/* <div className="card">
           <img src={Fee16} alt="Search" />
         </div> */}
@@ -92,4 +92,4 @@ function SingleFee() {
   );
 }
 
-export default SingleFee;
+export default FeeBreakUp;

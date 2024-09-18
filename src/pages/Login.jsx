@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import kindergatern from '../assets/kindergatern.png';
 import './Pages.scss';
 
 function Login() {
@@ -10,6 +11,7 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [consent, setConsent] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [backgroundImage, setBackgroundImage] = useState(null);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -33,6 +35,21 @@ function Login() {
       setLogoImage(savedImage);
     }
   }, []);
+
+  useEffect(() => {
+    const savedImage = localStorage.getItem('school-photo-image');
+    if (savedImage) {
+      setBackgroundImage(savedImage);
+    }
+  }, []);
+
+  const containerStyle = backgroundImage
+    ? {
+        backgroundImage: `url(${backgroundImage})`,
+      }
+    : {
+        backgroundImage: `url(${kindergatern})`,
+      };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -62,7 +79,7 @@ function Login() {
   };
 
   return (
-    <div className="page login">
+    <div className="page login" style={containerStyle}>
       <div className="flex">
         <div className="header">
           {logoImage ? (
@@ -141,8 +158,8 @@ function Login() {
 
       {/* Footer illustration */}
       <div className="footer">
-        <p className="microFont">
-          Powered by <span className="unify largeFont">UNIFY</span>
+        <p className="microFont white">
+          Powered by <span className="unify largeFont white">UNIFY</span>
         </p>
       </div>
     </div>

@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import kindergatern from '../assets/kindergatern.png';
 import './Pages.scss';
 
 function Home() {
   const navigate = useNavigate();
+  const [backgroundImage, setBackgroundImage] = useState(null);
   const [logoImage, setLogoImage] = useState(null);
 
   useEffect(() => {
@@ -23,8 +25,23 @@ function Home() {
     // Cleanup the timer when the component is unmounted
     return () => clearTimeout(timer);
   }, [navigate]);
+
+  useEffect(() => {
+    const savedImage = localStorage.getItem('school-photo-image');
+    if (savedImage) {
+      setBackgroundImage(savedImage);
+    }
+  }, []);
+
+  const containerStyle = backgroundImage
+    ? {
+        backgroundImage: `url(${backgroundImage})`,
+      }
+    : {
+        backgroundImage: `url(${kindergatern})`,
+      };
   return (
-    <div className="page home">
+    <div className="page home" style={containerStyle}>
       <div className="header">
         {logoImage ? (
           <img src={logoImage} alt="YCCA Logo" className="logo" />
@@ -32,12 +49,12 @@ function Home() {
           <img src={logo} alt="YCCA Logo" className="logo" />
         )}
 
-        <h1>Welcome</h1>
-        <p className="smallFont">Sign In to Kindergarten School</p>
+        <h1>Hey There!</h1>
+        <p className="smallFont">Welcome to Kindergarten School</p>
       </div>
       <div className="footer">
-        <p className="microFont">
-          Powered by <span className="unify largeFont">UNIFY</span>
+        <p className="microFont white">
+          Powered by <span className="unify largeFont white">UNIFY</span>
         </p>
       </div>
     </div>

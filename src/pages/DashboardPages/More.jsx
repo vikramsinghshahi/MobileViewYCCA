@@ -32,8 +32,6 @@ function More() {
   };
   const type = 'school-photo-image';
 
-  console.log(backgroundImage);
-
   const containerStyle = backgroundImage
     ? {
         backgroundImage: `url(${backgroundImage})`,
