@@ -33,7 +33,7 @@ function SingleFee() {
             <BackIcon /> Back
           </button>
         </div>
-        <h1>Fees</h1>
+        <h1 className="pt-0">Fees</h1>
       </div>
     );
   };
@@ -51,12 +51,6 @@ function SingleFee() {
         {/* <button className="card">
           <img src="/fees.png" alt="Search" />
         </button> */}
-        <button className="card">
-          <img src={Fee16} alt="Search" />
-        </button>
-        <div className="card">
-          <img src={Fee17} alt="Search" />
-        </div>
         <button
           className="card"
           onClick={() => navigate('/dashboard/fees/1/fee-breakup')}
@@ -74,6 +68,12 @@ function SingleFee() {
         </div>
         <div className="card">
           <img src={Fee15} alt="Search" />
+        </div>
+        <button className="card">
+          <img src={Fee16} alt="Search" />
+        </button>
+        <div className="card">
+          <img src={Fee17} alt="Search" />
         </div>
         {/* <div className="card">
           <img src={Fee16} alt="Search" />

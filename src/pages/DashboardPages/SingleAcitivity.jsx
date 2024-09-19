@@ -26,7 +26,7 @@ function SingleActivity() {
             <BackIcon /> Back
           </button>
         </div>
-        <h1>Activity</h1>
+        <h1 className="pt-0">Activity</h1>
         {/* <div className="filter">
           <DataField
             optionsData={options}

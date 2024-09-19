@@ -35,9 +35,9 @@ function SingleAnnouncement() {
           </button>
         </div>
         {isParentLogin ? (
-          <h1>Happy Last Day Of School</h1>
+          <h1 className="pt-0">Happy Last Day Of School</h1>
         ) : (
-          <h1>Announcement</h1>
+          <h1 className="pt-0">Announcement</h1>
         )}
 
         {/* <div className="filter">

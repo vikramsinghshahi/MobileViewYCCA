@@ -44,7 +44,7 @@ function Profile() {
             <BackIcon /> More
           </button>
         </div>
-        <h1>Profile</h1>
+        <h1 className="pt-0">Profile</h1>
       </div>
     );
   };

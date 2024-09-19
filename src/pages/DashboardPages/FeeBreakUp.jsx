@@ -33,7 +33,7 @@ function FeeBreakUp() {
             <BackIcon /> Back
           </button>
         </div>
-        <h1>Fee Break Up</h1>
+        <h1 className="pt-0">Fee Break Up</h1>
       </div>
     );
   };

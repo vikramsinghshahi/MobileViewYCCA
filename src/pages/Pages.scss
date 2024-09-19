@@ -72,6 +72,11 @@
   }
 }
 
+.homeLogo {
+  height: 100px;
+  object-fit: contain;
+}
+
 .login {
   .flex {
     width: 80%;
@@ -489,6 +494,10 @@
         text-align: right;
         color: white;
         width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 5px;
       }
     }
   }
@@ -502,7 +511,7 @@
       background-color: transparent;
       border: none;
       gap: 0;
-      border: 1px solid #c9c8c8;
+      // border: 1px solid #c9c8c8;
       min-height: auto;
 
       img {
@@ -541,9 +550,15 @@
     display: block;
     background-color: transparent;
     margin: 5px 10px;
+    margin-left: 0px;
     margin-bottom: 0px;
     display: flex;
     align-items: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   .adjustHeight {
@@ -708,5 +723,11 @@
       background-color: var(--primary-theme-color);
       color: black;
     }
+  }
+}
+
+.page {
+  .pt-0 {
+    padding-top: 0px;
   }
 }

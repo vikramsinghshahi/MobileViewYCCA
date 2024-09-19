@@ -15,6 +15,12 @@ function Announcement() {
     { value: 'all', label: 'All' },
   ];
 
+  const options2 = [
+    { value: 'class-one', label: 'Class One' },
+    { value: 'class-two', label: 'Class Two' },
+    { value: 'all', label: 'All' },
+  ];
+
   // Function to handle option change
   const handleSelectChange = (selectedOption) => {
     console.log('Selected option:', selectedOption);
@@ -38,12 +44,12 @@ function Announcement() {
             <BackIcon /> Back
           </button>
         </div>
-        <h1>Announcement</h1>
+        <h1 className="pt-0">Announcement</h1>
         {!isParentLogin && (
           <div className="filter">
             <DataField
-              optionsData={options}
-              defaultValue={options[0]}
+              optionsData={options2}
+              defaultValue={options2[0]}
               label=""
               onChange={handleSelectChange}
               className="custom-select"
@@ -56,7 +62,7 @@ function Announcement() {
               className="custom-select"
             />
             <p className="text">
-              <ResetIcon />
+              <ResetIcon /> Reset
             </p>
           </div>
         )}

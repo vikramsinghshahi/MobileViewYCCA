@@ -26,7 +26,7 @@ function SingleChat() {
             <BackIcon /> Back
           </button>
         </div>
-        <h1>Chat</h1>
+        <h1 className="pt-0">Chat</h1>
         {/* <div className="filter">
           <DataField
             optionsData={options}

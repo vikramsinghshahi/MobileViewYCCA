@@ -18,6 +18,22 @@ import More15 from '../../assets/more15.png';
 import More16 from '../../assets/more16.png';
 import Fee from '../../assets/fee.png';
 import Gallery from '../../assets/gallery.png';
+import More17 from '../../assets/more17.png';
+import More18 from '../../assets/more18.png';
+import More19 from '../../assets/more19.png';
+import More20 from '../../assets/more20.png';
+import More21 from '../../assets/more21.png';
+import More22 from '../../assets/more22.png';
+import More23 from '../../assets/more23.png';
+import More24 from '../../assets/more24.png';
+import More25 from '../../assets/more25.png';
+import More26 from '../../assets/more26.png';
+import More27 from '../../assets/more27.png';
+import More28 from '../../assets/more28.png';
+import More29 from '../../assets/more29.png';
+import More30 from '../../assets/more30.png';
+import More31 from '../../assets/more31.png';
+import More32 from '../../assets/more32.png';
 
 function More() {
   const [backgroundImage, setBackgroundImage] = useState(null);
@@ -58,48 +74,48 @@ function More() {
     return (
       <div className="cardContainer">
         <button className="card" onClick={() => navigate('/dashboard/chats')}>
-          <img src={More1} alt="More 1" />
+          <img src={More17} alt="More 1" />
         </button>
         <button
           className="card"
           onClick={() => navigate('/dashboard/announcement')}
         >
-          <img src={More2} alt="More 2" />
+          <img src={More18} alt="More 2" />
         </button>
         <button
           className="card"
           onClick={() => navigate('/dashboard/activity')}
         >
-          <img src={More3} alt="More 3" />
+          <img src={More19} alt="More 3" />
         </button>
         <button className="card" onClick={() => navigate('/dashboard/report')}>
-          <img src={More4} alt="More 4" />
+          <img src={More20} alt="More 4" />
         </button>
         <div className="card">
-          <img src={More5} alt="More 5" />
+          <img src={More21} alt="More 5" />
         </div>
         <div className="card">
-          <img src={More6} alt="More 6" />
+          <img src={More22} alt="More 6" />
         </div>
         <div className="card">
-          <img src={More9} alt="More 9" />
+          <img src={More23} alt="More 9" />
         </div>
         {!isParentLogin ? (
           <>
             <div className="card">
-              <img src={More7} alt="More 7" />
+              <img src={More24} alt="More 7" />
             </div>
             <div className="card">
-              <img src={More8} alt="More 8" />
+              <img src={More25} alt="More 8" />
             </div>
             <div className="card">
-              <img src={More10} alt="More 10" />
+              <img src={More26} alt="More 10" />
             </div>
             <div className="card">
-              <img src={More11} alt="More 11" />
+              <img src={More27} alt="More 11" />
             </div>
             <div className="card">
-              <img src={More12} alt="More 12" />
+              <img src={More28} alt="More 12" />
             </div>
           </>
         ) : (
@@ -113,16 +129,28 @@ function More() {
           </>
         )}
         <div className="card">
-          <img src={More13} alt="More 13" />
+          <img src={More29} alt="More 13" />
         </div>
         <div className="card" onClick={() => navigate('/dashboard/profile')}>
-          <img src={More14} alt="More 14" />
+          <img src={More30} alt="More 14" />
         </div>
         <div className="card">
-          <img src={More15} alt="More 15" />
+          <img src={More31} alt="More 15" />
         </div>
         <div className="card">
-          <img src={More16} alt="More 16" />
+          <img src={More32} alt="More 16" />
+        </div>
+        <div className="card" style={{ pointerEvents: 'none' }}>
+          {/* <img src={More16} alt="More 16" /> */}
+        </div>
+        <div className="card" style={{ pointerEvents: 'none' }}>
+          {/* <img src={More16} alt="More 16" /> */}
+        </div>
+        <div className="card" style={{ pointerEvents: 'none' }}>
+          {/* <img src={More16} alt="More 16" /> */}
+        </div>
+        <div className="card" style={{ pointerEvents: 'none' }}>
+          {/* <img src={More16} alt="More 16" /> */}
         </div>
         <div className="card" style={{ pointerEvents: 'none' }}>
           {/* <img src={More16} alt="More 16" /> */}

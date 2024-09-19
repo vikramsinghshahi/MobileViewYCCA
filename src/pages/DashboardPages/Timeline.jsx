@@ -6,6 +6,12 @@ import Tcard3 from '../../assets/tcard3.png';
 import Tcard4 from '../../assets/tcard4.png';
 import Tcard5 from '../../assets/tcard5.png';
 import Tcard6 from '../../assets/tcard6.png';
+import Tcard7 from '../../assets/tcard7.png';
+import Tcard8 from '../../assets/tcard8.png';
+import Tcard9 from '../../assets/tcard9.png';
+import Tcard10 from '../../assets/tcard10.png';
+import Tcard11 from '../../assets/tcard11.png';
+import Tcard12 from '../../assets/tcard12.png';
 import ResetIcon from '../../Common/Icons/Reset';
 
 function Timeline() {
@@ -13,6 +19,12 @@ function Timeline() {
   const options = [
     { value: 'site-one', label: 'Site One' },
     { value: 'site-two', label: 'Site Two' },
+    { value: 'all', label: 'All' },
+  ];
+
+  const options2 = [
+    { value: 'class-one', label: 'Class One' },
+    { value: 'class-two', label: 'Class Two' },
     { value: 'all', label: 'All' },
   ];
 
@@ -35,8 +47,8 @@ function Timeline() {
         {!isParentLogin && (
           <div className="filter">
             <DataField
-              optionsData={options}
-              defaultValue={options[0]}
+              optionsData={options2}
+              defaultValue={options2[0]}
               label=""
               onChange={handleSelectChange}
               className="custom-select"
@@ -49,7 +61,7 @@ function Timeline() {
               className="custom-select"
             />
             <p className="text">
-              <ResetIcon />
+              <ResetIcon /> Reset
             </p>
           </div>
         )}
@@ -61,22 +73,34 @@ function Timeline() {
     return (
       <>
         <div className="card ">
-          <img src={Tcard1} alt="Search" />
+          <img src={Tcard7} alt="Search" />
         </div>
         <div className="card  ">
-          <img src={Tcard2} alt="Search" />
+          <img src={Tcard8} alt="Search" />
         </div>
         <div className="card  ">
-          <img src={Tcard3} alt="Search" />
+          <img src={Tcard9} alt="Search" />
         </div>
         <div className="card  ">
-          <img src={Tcard4} alt="Search" />
+          <img src={Tcard10} alt="Search" />
         </div>
         <div className="card  ">
-          <img src={Tcard5} alt="Search" />
+          <img src={Tcard11} alt="Search" />
         </div>
         <div className="card  ">
-          <img src={Tcard6} alt="Search" />
+          <img src={Tcard12} alt="Search" />
+        </div>
+        <div className="card  " style={{ visibility: 'hidden' }}>
+          {/* <img src="/More7.png" alt="Search" /> */}
+        </div>
+        <div className="card  " style={{ visibility: 'hidden' }}>
+          {/* <img src="/More7.png" alt="Search" /> */}
+        </div>
+        <div className="card  " style={{ visibility: 'hidden' }}>
+          {/* <img src="/More7.png" alt="Search" /> */}
+        </div>
+        <div className="card  " style={{ visibility: 'hidden' }}>
+          {/* <img src="/More7.png" alt="Search" /> */}
         </div>
         {/* <div className="card  ">
           <img src="/More7.png" alt="Search" />

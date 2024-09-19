@@ -17,6 +17,11 @@ function Chats() {
     { value: 'site-two', label: 'Site Two' },
     { value: 'all', label: 'All' },
   ];
+  const options2 = [
+    { value: 'class-one', label: 'Class One' },
+    { value: 'class-two', label: 'Class Two' },
+    { value: 'all', label: 'All' },
+  ];
 
   // Function to handle option change
   const handleSelectChange = (selectedOption) => {
@@ -41,12 +46,12 @@ function Chats() {
             <BackIcon /> Back
           </button>
         </div>
-        <h1>Chats</h1>
+        <h1 className="pt-0">Chats</h1>
         {!isParentLogin && (
           <div className="filter">
             <DataField
-              optionsData={options}
-              defaultValue={options[0]}
+              optionsData={options2}
+              defaultValue={options2[0]}
               label=""
               onChange={handleSelectChange}
               className="custom-select"
@@ -59,7 +64,7 @@ function Chats() {
               className="custom-select"
             />
             <p className="text">
-              <ResetIcon />
+              <ResetIcon /> Reset
             </p>
           </div>
         )}

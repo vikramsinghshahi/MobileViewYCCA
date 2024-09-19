@@ -44,9 +44,9 @@ function Home() {
     <div className="page home" style={containerStyle}>
       <div className="header">
         {logoImage ? (
-          <img src={logoImage} alt="YCCA Logo" className="logo" />
+          <img src={logoImage} alt="YCCA Logo" className="logo homeLogo" />
         ) : (
-          <img src={logo} alt="YCCA Logo" className="logo" />
+          <img src={logo} alt="YCCA Logo" className="logo homeLogo" />
         )}
 
         <h1>Hey There!</h1>

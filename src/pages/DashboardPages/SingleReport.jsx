@@ -26,7 +26,7 @@ function SingleReport() {
             <BackIcon /> Back
           </button>
         </div>
-        <h1>Rebecca Girardi</h1>
+        <h1 className="pt-0">Rebecca Girardi</h1>
         {/* <div className="filter">
           <DataField
             optionsData={options}
