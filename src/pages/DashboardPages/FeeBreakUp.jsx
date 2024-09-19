@@ -28,7 +28,7 @@ function FeeBreakUp() {
         <div>
           <button
             className="backBtn smallFont"
-            onClick={() => navigate('/dashboard/fees/:id')}
+            onClick={() => navigate('/dashboard/fees/1')}
           >
             <BackIcon /> Back
           </button>
@@ -66,8 +66,8 @@ function FeeBreakUp() {
         <div className="card" style={{ visibility: 'hidden' }}>
           <img src={Fee13} alt="Search" />
         </div>
-        <div className="card" style={{ visibility: 'hidden' }}>
-          <img src={Fee14} alt="Search" />
+        <div className="card " style={{ pointerEvents: 'none' }}>
+          <button className="paymnetBtn">Proceed To Paymnet</button>
         </div>
         {/* <div className="card">
           <img src={Fee15} alt="Search" />

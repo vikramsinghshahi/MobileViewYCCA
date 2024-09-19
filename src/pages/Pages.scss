@@ -731,3 +731,14 @@
     padding-top: 0px;
   }
 }
+
+.timeLinePageContent {
+  .paymnetBtn {
+    border: 1px solid red;
+    width: 100%;
+    background-color: var(--primary-theme-color);
+    padding: 12px 0px;
+    color: white;
+    border-radius: 10px;
+  }
+}
