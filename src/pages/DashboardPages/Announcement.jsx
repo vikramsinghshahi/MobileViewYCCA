@@ -48,15 +48,15 @@ function Announcement() {
         {!isParentLogin && (
           <div className="filter">
             <DataField
-              optionsData={options2}
-              defaultValue={options2[0]}
+              optionsData={options}
+              defaultValue={options[0]}
               label=""
               onChange={handleSelectChange}
               className="custom-select"
             />
             <DataField
-              optionsData={options}
-              defaultValue={options[0]}
+              optionsData={options2}
+              defaultValue={options2[0]}
               label=""
               onChange={handleSelectChange}
               className="custom-select"

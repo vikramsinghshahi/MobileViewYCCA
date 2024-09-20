@@ -62,16 +62,17 @@ function Home() {
       <div className="card profile-section">
         <div className="dropDown">
           <h2>Hii Arjun,</h2>
+
           <DataField
-            optionsData={options2}
-            defaultValue={options2[0]}
+            optionsData={options}
+            defaultValue={options[0]}
             label=""
             onChange={handleSelectChange}
             className="custom-select"
           />
           <DataField
-            optionsData={options}
-            defaultValue={options[0]}
+            optionsData={options2}
+            defaultValue={options2[0]}
             label=""
             onChange={handleSelectChange}
             className="custom-select"
