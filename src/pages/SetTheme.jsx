@@ -138,18 +138,7 @@ function SetTheme() {
         <div className="card phone"></div>
         <div className="btn-container">
           <button className="upload logoUpload" onClick={triggerLogoInput}>
-            {logo ? (
-              <img
-                src={logo}
-                alt={`${logotype}`}
-                style={{
-                  width: '150px',
-                  height: '150px',
-                  objectFit: 'cover',
-                  borderRadius: '10px',
-                }}
-              />
-            ) : (
+            {!logo && (
               <input
                 type="file"
                 accept="image/*"
@@ -159,20 +148,23 @@ function SetTheme() {
                 style={{ display: 'none' }} // Hide the input
               />
             )}
+            <div className="white-bg">
+              {logo && (
+                <img
+                  src={logo}
+                  alt={`${logotype}`}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '10px',
+                  }}
+                />
+              )}
+            </div>
           </button>
           <button className="upload imageUpload" onClick={triggerImageInput}>
-            {image ? (
-              <img
-                src={image}
-                alt={`${type}`}
-                style={{
-                  width: '150px',
-                  height: '150px',
-                  objectFit: 'cover',
-                  borderRadius: '10px',
-                }}
-              />
-            ) : (
+            {!image && (
               <input
                 type="file"
                 accept="image/*"
@@ -182,6 +174,20 @@ function SetTheme() {
                 style={{ display: 'none' }} // Hide the input
               />
             )}
+            <div className="white-bg photo-bg">
+              {image && (
+                <img
+                  src={image}
+                  alt={`${type}`}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '10px',
+                  }}
+                />
+              )}
+            </div>
           </button>
         </div>
         <div className="card colorSection">
