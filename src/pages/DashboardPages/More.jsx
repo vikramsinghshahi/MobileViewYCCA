@@ -105,7 +105,10 @@ function More() {
             <div className="card">
               <img src={More24} alt="More 7" />
             </div>
-            <div className="card">
+            <div
+              className="card"
+              onClick={() => navigate('/dashboard/communication')}
+            >
               <img src={More25} alt="More 8" />
             </div>
             <div className="card">
@@ -123,7 +126,10 @@ function More() {
             <div className="card" onClick={() => navigate('/dashboard/fees')}>
               <img src={Fee} alt="Fee" />
             </div>
-            <div className="card">
+            <div
+              className="card"
+              onClick={() => navigate('/dashboard/gallery')}
+            >
               <img src={Gallery} alt="Gallery" />
             </div>
           </>

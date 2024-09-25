@@ -41,6 +41,9 @@ import Parent from './DashboardPages/Parent';
 import ParentChat from './DashboardPages/ParentChat';
 import AddActivity from './DashboardPages/AddActivity';
 import AddReport from './DashboardPages/AddReport';
+import Communication from './DashboardPages/Communiaction';
+import SingleCommunication from './DashboardPages/SingleCommunication';
+import Gallery from './DashboardPages/Gallery';
 
 function Dashboard() {
   const location = useLocation();
@@ -120,6 +123,9 @@ function Dashboard() {
         <Route path="fees/:id" element={<SingleFee />} />
         <Route path="fees/:id/fee-breakup" element={<FeeBreakUp />} />
         <Route path="profile" element={<Profile />} />
+        <Route path="communication" element={<Communication />} />
+        <Route path="communication/:id" element={<SingleCommunication />} />
+        <Route path="gallery" element={<Gallery />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     );
