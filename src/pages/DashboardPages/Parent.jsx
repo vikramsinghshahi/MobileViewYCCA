@@ -51,7 +51,7 @@ function Parent() {
         <div className="i-p-header">
           <button
             className="backBtn smallFont"
-            onClick={() => navigate('/dashboard/chat/classes')}
+            onClick={() => navigate('/dashboard/chat/classes/studentList')}
           >
             <BackIcon /> Back
           </button>

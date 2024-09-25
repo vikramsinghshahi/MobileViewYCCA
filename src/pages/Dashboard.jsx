@@ -39,6 +39,8 @@ import Classes from './DashboardPages/Classes';
 import StudentList from './DashboardPages/Studentlist';
 import Parent from './DashboardPages/Parent';
 import ParentChat from './DashboardPages/ParentChat';
+import AddActivity from './DashboardPages/AddActivity';
+import AddReport from './DashboardPages/AddReport';
 
 function Dashboard() {
   const location = useLocation();
@@ -97,8 +99,10 @@ function Dashboard() {
         <Route path="announcement/add" element={<AddAnnouncement />} />
         <Route path="activity" element={<Activity />} />
         <Route path="activity/:id" element={<SingleActivity />} />
+        <Route path="activity/add" element={<AddActivity />} />
         <Route path="report" element={<Report />} />
         <Route path="report/:id" element={<SingleReport />} />
+        <Route path="report/add" element={<AddReport />} />
         <Route path="chats" element={<Chats />} />
         <Route path="chats/:id" element={<SingleChat />} />
         <Route path="chat/add" element={<AddChats />} />

@@ -654,6 +654,21 @@
     padding-bottom: 170px;
   }
 
+  .addActivity {
+    justify-content: center;
+    .btn {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #161684;
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+    }
+  }
+
   .p-singleAnnouncement {
     background-image: url('/src/assets/pannounce.png');
     background-size: contain;

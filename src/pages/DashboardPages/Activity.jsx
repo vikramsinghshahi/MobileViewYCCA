@@ -43,7 +43,10 @@ function Activity() {
           >
             <BackIcon /> Back
           </button>
-          <button className="addBtn">
+          <button
+            className="addBtn"
+            onClick={() => navigate('/dashboard/activity/add')}
+          >
             <Plus />
           </button>
         </div>

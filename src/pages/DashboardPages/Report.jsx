@@ -43,7 +43,10 @@ function Report() {
           >
             <BackIcon /> Back
           </button>
-          <button className="addBtn">
+          <button
+            className="addBtn"
+            onClick={() => navigate('/dashboard/report/add')}
+          >
             <Plus />
           </button>
         </div>
