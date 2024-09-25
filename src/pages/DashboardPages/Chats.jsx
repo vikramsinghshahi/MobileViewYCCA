@@ -8,8 +8,9 @@ import Chat4 from '../../assets/chat4.png';
 import Chat5 from '../../assets/chat5.png';
 import BackIcon from '../../Common/Icons/Back';
 import ResetIcon from '../../Common/Icons/Reset';
+import Plus from '../../Common/Icons/Plus';
 
-function Chats() {
+function Chats(props) {
   const navigate = useNavigate();
   const [isParentLogin, setUserLogin] = useState(null);
   const options = [
@@ -38,12 +39,18 @@ function Chats() {
   const header = () => {
     return (
       <div className="header timelinePageHeader">
-        <div>
+        <div className="i-p-header">
           <button
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/more')}
           >
             <BackIcon /> Back
+          </button>
+          <button
+            className="addBtn"
+            onClick={() => navigate('/dashboard/chat/add')}
+          >
+            <Plus />
           </button>
         </div>
         <h1 className="pt-0">Chats</h1>
@@ -75,10 +82,20 @@ function Chats() {
   const renderCards = () => {
     return (
       <>
-        <button className="card" onClick={() => navigate('/dashboard/chats/1')}>
+        <button
+          className="card"
+          onClick={() => {
+            navigate('/dashboard/chats/1');
+          }}
+        >
           <img src={Chat1} alt="Search" />
         </button>
-        <button className="card" onClick={() => navigate('/dashboard/chats/2')}>
+        <button
+          className="card"
+          onClick={() => {
+            navigate('/dashboard/chats/2');
+          }}
+        >
           <img src={Chat2} alt="Search" />
         </button>
         <div className="card  ">

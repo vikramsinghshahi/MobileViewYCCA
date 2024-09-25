@@ -1,5 +1,11 @@
-import React from 'react';
-import { Routes, Route, Navigate, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import {
+  Routes,
+  Route,
+  Navigate,
+  NavLink,
+  useLocation,
+} from 'react-router-dom';
 import DataField from '../Common/DataField/DataField';
 import NotFound from './NotFound';
 import Home from './DashboardPages/Home';
@@ -26,8 +32,21 @@ import DashboardIcon from '../Common/Icons/Dashboard';
 import MoreIcon from '../Common/Icons/More';
 import TimelineIcon from '../Common/Icons/Timeline';
 import FeeBreakUp from './DashboardPages/FeeBreakUp';
+import SendChat from '../Common/Icons/SendChat';
+import AddAnnouncement from './DashboardPages/AddAnnouncement';
+import AddChats from './DashboardPages/AddChats';
+import Classes from './DashboardPages/Classes';
+import StudentList from './DashboardPages/Studentlist';
+import Parent from './DashboardPages/Parent';
+import ParentChat from './DashboardPages/ParentChat';
 
 function Dashboard() {
+  const location = useLocation();
+  const isChatRoute =
+    location.pathname.includes('/dashboard/chats/') ||
+    location.pathname.includes(
+      '/dashboard/chat/classes/studentList/parentList/parentchat'
+    );
   const bottomNav = () => (
     <div className="bottom-nav">
       <div className="nav-items">
@@ -59,6 +78,13 @@ function Dashboard() {
     </div>
   );
 
+  const chatBar = () => (
+    <div className="bottom-nav chat-nav">
+      <input type="text" placeholder="Write Something here" />
+      <SendChat />
+    </div>
+  );
+
   const renderContentPages = () => {
     return (
       <Routes>
@@ -68,12 +94,24 @@ function Dashboard() {
         <Route path="timeline" element={<Timeline />} />
         <Route path="announcement" element={<Announcement />} />
         <Route path="announcement/:id" element={<SingleAnnouncement />} />
+        <Route path="announcement/add" element={<AddAnnouncement />} />
         <Route path="activity" element={<Activity />} />
         <Route path="activity/:id" element={<SingleActivity />} />
         <Route path="report" element={<Report />} />
         <Route path="report/:id" element={<SingleReport />} />
         <Route path="chats" element={<Chats />} />
         <Route path="chats/:id" element={<SingleChat />} />
+        <Route path="chat/add" element={<AddChats />} />
+        <Route path="chat/classes" element={<Classes />} />
+        <Route path="chat/classes/studentList" element={<StudentList />} />
+        <Route
+          path="chat/classes/studentList/parentList"
+          element={<Parent />}
+        />
+        <Route
+          path="chat/classes/studentList/parentList/parentchat"
+          element={<ParentChat />}
+        />
         <Route path="fees" element={<Fees />} />
         <Route path="fees/:id" element={<SingleFee />} />
         <Route path="fees/:id/fee-breakup" element={<FeeBreakUp />} />
@@ -82,10 +120,11 @@ function Dashboard() {
       </Routes>
     );
   };
+  console.log({ location });
   return (
     <div className="page dashboard">
       {renderContentPages()}
-      {bottomNav()}
+      {isChatRoute ? chatBar() : bottomNav()}
     </div>
   );
 }

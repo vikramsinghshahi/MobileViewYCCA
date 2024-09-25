@@ -293,6 +293,20 @@
     .card:hover {
       border: 1px solid var(--primary-theme-color) !important;
     }
+
+    .classesContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: space-between;
+      padding: 0px 10px;
+      height: 50%;
+
+      .card {
+        width: 48%;
+        margin: 0;
+      }
+    }
   }
 
   .bottom-nav {
@@ -392,6 +406,28 @@
           color: var(--primary-theme-color);
         }
       }
+    }
+  }
+
+  .chat-nav {
+    height: 57px;
+
+    input[type='text'] {
+      width: 78%;
+      margin: 0 10px;
+      padding: 10px;
+      border-radius: 10px;
+      border-color: var(--primary-theme-color) !important;
+    }
+
+    input[type='text']:focus {
+      border-color: var(
+        --primary-theme-color
+      ); /* Custom focus color, here it's green */
+    }
+
+    svg {
+      margin-right: 10px;
     }
   }
 
@@ -609,6 +645,15 @@
     background-image: url('/src/assets/singleChat.png');
   }
 
+  .addAnnounce {
+    background-image: url('/src/assets/addAnnouncement.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 95px;
+    height: calc(100vh - 170px);
+    padding-bottom: 170px;
+  }
+
   .p-singleAnnouncement {
     background-image: url('/src/assets/pannounce.png');
     background-size: contain;
@@ -765,6 +810,29 @@
 .page {
   .pt-0 {
     padding-top: 0px;
+  }
+
+  .i-p-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+
+    .addBtn {
+      border: none;
+      display: block;
+      background-color: transparent;
+      margin: 5px 10px;
+      margin-left: 0px;
+      margin-bottom: 0px;
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 10px;
+      }
+    }
   }
 }
 

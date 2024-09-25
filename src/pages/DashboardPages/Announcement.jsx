@@ -5,6 +5,7 @@ import PAnnouneCard from '../../assets/PAnnouneCard.png';
 import Announc from '../../assets/announc.png';
 import BackIcon from '../../Common/Icons/Back';
 import ResetIcon from '../../Common/Icons/Reset';
+import Plus from '../../Common/Icons/Plus';
 
 function Announcement() {
   const navigate = useNavigate();
@@ -36,12 +37,18 @@ function Announcement() {
   const header = () => {
     return (
       <div className="header timelinePageHeader">
-        <div>
+        <div className="i-p-header">
           <button
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/more')}
           >
             <BackIcon /> Back
+          </button>
+          <button
+            className="addBtn"
+            onClick={() => navigate('/dashboard/announcement/add')}
+          >
+            <Plus />
           </button>
         </div>
         <h1 className="pt-0">Announcement</h1>

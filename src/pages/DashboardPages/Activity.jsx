@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Activity1 from '../../assets/activity1.png';
 import BackIcon from '../../Common/Icons/Back';
 import ResetIcon from '../../Common/Icons/Reset';
+import Plus from '../../Common/Icons/Plus';
 
 function Activity() {
   const navigate = useNavigate();
@@ -35,12 +36,15 @@ function Activity() {
   const header = () => {
     return (
       <div className="header timelinePageHeader">
-        <div>
+        <div className="i-p-header">
           <button
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/more')}
           >
             <BackIcon /> Back
+          </button>
+          <button className="addBtn">
+            <Plus />
           </button>
         </div>
         <h1 className="pt-0">Activity</h1>

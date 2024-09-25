@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Report1 from '../../assets/report1.png';
 import ResetIcon from '../../Common/Icons/Reset';
 import BackIcon from '../../Common/Icons/Back';
+import Plus from '../../Common/Icons/Plus';
 
 function Report() {
   const navigate = useNavigate();
@@ -35,15 +36,18 @@ function Report() {
   const header = () => {
     return (
       <div className="header timelinePageHeader">
-        <div>
+        <div className="i-p-header">
           <button
             className="backBtn smallFont"
             onClick={() => navigate('/dashboard/more')}
           >
             <BackIcon /> Back
           </button>
+          <button className="addBtn">
+            <Plus />
+          </button>
         </div>
-        <h1 className="pt-0">Report</h1>
+        <h1 className="pt-0">Daily Report</h1>
         {!isParentLogin && (
           <div className="filter">
             <DataField
